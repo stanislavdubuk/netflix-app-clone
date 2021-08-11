@@ -27,8 +27,8 @@ const WidgetSmall: React.FC = (): JSX.Element => {
     <div className='widgetSmall'>
       <h3 className='widgetSmallTitle'>New Join Members</h3>
       <ul className='widgetSmallList'>
-        {newUsers.map((user: any) => (
-          <li className='widgetSmallListItem'>
+        {newUsers.map((user: any, i: number) => (
+          <li key={i} className='widgetSmallListItem'>
             <img
               src={
                 user.profilePic ||

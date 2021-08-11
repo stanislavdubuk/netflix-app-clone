@@ -5,9 +5,12 @@
 
 .addProductForm {
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .addProductItem {
+  padding: 20px;
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -29,13 +32,14 @@
 }
 
 .addProductButton {
-  width: 250px;
+  align-self: center;
+  width: 100px;
+  height: 50px;
   border: none;
   background-color: darkblue;
   color: white;
-  padding: 7px 10px;
+  padding: 10px;
   font-weight: 600;
   border-radius: 5px;
-  margin-top: 30px;
   cursor: pointer;
 }

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Topbar.css';
 import { NotificationsNone, Language, Settings } from '@material-ui/icons';
+import { AuthContext } from '../../context/authContext/AuthContext';
+import { logout } from '../../context/authContext/AuthActions';
 
 const Topbar: React.FC = (): JSX.Element => {
+  const { dispatch } = useContext<any>(AuthContext);
+  const handleLogout = (e: any) => {
+    e.preventDefault();
+    dispatch(logout());
+  };
+
   return (
     <div className='topbar'>
       <div className='topbarWrapper'>
@@ -22,6 +30,9 @@ const Topbar: React.FC = (): JSX.Element => {
             <Settings />
           </div>
           <div className='topAvatar'></div>
+          <button className='topbarLogoutBtn' onClick={handleLogout}>
+            Logout
+          </button>
         </div>
       </div>
     </div>

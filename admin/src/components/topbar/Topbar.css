@@ -58,3 +58,17 @@
   background-size: cover;
   background-position-y: 0.5%;
 }
+
+.topbarLogoutBtn {
+  border: none;
+  background-color: rgb(255, 101, 81);
+  margin-left: 0.5rem;
+  border-radius: 2px;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.topbarLogoutBtn:hover {
+  opacity: 0.9;
+}
