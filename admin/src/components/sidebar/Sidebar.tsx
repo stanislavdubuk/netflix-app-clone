@@ -87,7 +87,7 @@ const Sidebar: React.FC = (): JSX.Element => {
           <ul className='sidebarList'>
             <li className='sidebarListItem'>
               <WorkOutline className='sidebarIcon' />
-              Manage
+              Manage Staff
             </li>
             <li className='sidebarListItem'>
               <Timeline className='sidebarIcon' />
