@@ -5,7 +5,6 @@ import {
   Timeline,
   TrendingUp,
   PermIdentity,
-  AttachMoney,
   BarChart,
   MailOutline,
   DynamicFeed,
@@ -13,6 +12,7 @@ import {
   WorkOutline,
   Report,
   PlayCircleFilledOutlined,
+  List,
 } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 
@@ -54,11 +54,12 @@ const Sidebar: React.FC = (): JSX.Element => {
                 Movies
               </li>
             </Link>
-
-            <li className='sidebarListItem'>
-              <AttachMoney className='sidebarIcon' />
-              Transactions
-            </li>
+            <Link to='/lists' className='link'>
+              <li className='sidebarListItem'>
+                <List className='sidebarIcon' />
+                Lists
+              </li>
+            </Link>
             <li className='sidebarListItem'>
               <BarChart className='sidebarIcon' />
               Reports

@@ -6,9 +6,10 @@ import './FeaturedContent.scss';
 
 interface Props {
   type?: string;
+  setGenre: any;
 }
 
-const FeaturedMovie: React.FC<Props> = ({ type }): JSX.Element => {
+const FeaturedMovie: React.FC<Props> = ({ type, setGenre }): JSX.Element => {
   const [content, setContent] = useState<any>({});
 
   useEffect(() => {
@@ -31,9 +32,14 @@ const FeaturedMovie: React.FC<Props> = ({ type }): JSX.Element => {
     <div className='featured'>
       {type && (
         <div className='category'>
-          <span>{type === 'movies' ? 'Movies' : 'Series'}</span>
-          <select name='genre' id='genre'>
+          <span>{type === 'movie' ? 'Movies' : 'Series'}</span>
+          <select
+            name='genre'
+            id='genre'
+            onChange={(e: any) => setGenre(e.target.value)}
+          >
             <option>Genre</option>
+            <option value='action'>Action</option>
             <option value='adventure'>Adventure</option>
             <option value='comedy'>Comedy</option>
             <option value='crime'>Crime</option>

@@ -20,18 +20,6 @@
       .logo {
         height: 40px;
       }
-
-      .loginButton {
-        background-color: red;
-        border: none;
-        color: #fff;
-        border-radius: 5px;
-        padding: 8px 22px;
-        font-size: 16px;
-        font-weight: 400;
-        cursor: pointer;
-        z-index: 20;
-      }
     }
   }
   .container {
@@ -45,6 +33,23 @@
     align-items: center;
     justify-content: center;
     color: #fff;
+
+    .loginButton {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background-color: red;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      padding: 8px 22px;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      height: 40px;
+      width: 100px;
+      z-index: 20;
+    }
 
     h1 {
       font-size: 50px;

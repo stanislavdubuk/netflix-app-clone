@@ -38,7 +38,7 @@ const Home: React.FC<IProps> = ({ type }): JSX.Element => {
   return (
     <div className='home'>
       <Navbar />
-      <FeaturedContent type={type} />
+      <FeaturedContent type={type} setGenre={setGenre} />
       {lists.map((list: any, index: number) => (
         <List key={index} list={list} />
       ))}

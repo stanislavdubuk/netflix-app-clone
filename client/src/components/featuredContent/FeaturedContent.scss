@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .featured {
   height: 90vh;
   position: relative;
@@ -30,20 +32,30 @@
   }
 
   .info {
-    width: 35%;
+    width: 80%;
     position: absolute;
     left: 4rem;
     bottom: 6rem;
     color: #fff;
     display: flex;
     flex-direction: column;
+    @include tablet {
+      left: 2rem;
+    }
 
     img {
       width: 25rem;
+      @include mobile {
+        width: 60vw;
+      }
     }
 
     .desc {
       margin: 1.25rem 0;
+
+      @include mobile {
+        width: 60vw;
+      }
     }
 
     .buttons {
